@@ -5,7 +5,7 @@ import 'firebase/firestore';
 import './App.css';
 import FluffyUnicornList from './components/FluffyUnicornList';
 import SingleUnicorn from './components/SingleUnicorn';
-// import AddFluffyUnicorn from './components/AddFluffyUnicorn';
+import AddUnicorn from './components/AddUnicorn';
 
 const App = () => {
 	const [fluffyUnicornData, setFluffyUnicornData] = useState(null);
@@ -14,7 +14,7 @@ const App = () => {
 	useEffect(() => {
 		const db = firebase.firestore();
 		const unicornCollection = db.collection('unicorns');
-		unicornCollection.get().then(snapshot => {
+		unicornCollection.onSnapshot(snapshot => {
 			console.log('We got some unicorns');
 			let list = [];
 			snapshot.forEach(doc => {
@@ -39,9 +39,11 @@ const App = () => {
 		</div>
 		<FluffyUnicornList list={fluffyUnicornData} filter={filterText} />
 
+		<AddUnicorn />
+
 		<SingleUnicorn />
 
-		<div>TODO lägga till ett nytt element till listan</div>
+
 		<div>TODO uppdatera listan så att man kan ändra och ta bort</div>
 		</div>
 	);
