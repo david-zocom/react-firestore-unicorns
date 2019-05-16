@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.unicornList {
+	list-style-type: none;
+	display: inline-block;
+	text-align: left;
+}
+
+.unicornListItem {
+	position: relative;
+	padding-right: 2em;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+.unicornListItem > span {
+	/* margin: 2em; */
+	display: inline-block;
+	text-align: right;
+	position: absolute;
+	right: 0px;
+	transition: all 0.5s;
+}
+.unicornListItem > span:last-child {
+	right: -1.5em;
+}
+.unicornListItem > span:hover {
+	cursor: crosshair;
+	transform: scale(1.5);
+}
+
+
+
+
+
+/*  */

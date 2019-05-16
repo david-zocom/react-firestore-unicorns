@@ -42,9 +42,6 @@ const App = () => {
 		<AddUnicorn />
 
 		<SingleUnicorn />
-
-
-		<div>TODO uppdatera listan så att man kan ändra och ta bort</div>
 		</div>
 	);
 }
