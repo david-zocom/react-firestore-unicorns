@@ -4,6 +4,7 @@ import 'firebase/firestore';
 
 import './App.css';
 import FluffyUnicornList from './components/FluffyUnicornList';
+import SingleUnicorn from './components/SingleUnicorn';
 // import AddFluffyUnicorn from './components/AddFluffyUnicorn';
 
 const App = () => {
@@ -38,14 +39,10 @@ const App = () => {
 		</div>
 		<FluffyUnicornList list={fluffyUnicornData} filter={filterText} />
 
-		<div>
-			<input type="text" placeholder="document id"
-			id="inputDocId" />
-			<button id="fetchDocButton">Hämta dokument</button>
-			<p id="docContent">
-			Dokumentet ska visas här!
-			</p>
-		</div>
+		<SingleUnicorn />
+
+		<div>TODO lägga till ett nytt element till listan</div>
+		<div>TODO uppdatera listan så att man kan ändra och ta bort</div>
 		</div>
 	);
 }
